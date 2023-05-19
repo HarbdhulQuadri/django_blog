@@ -1,10 +1,10 @@
 import React from 'react';
-function Login(){
+function Form(){
     return (
         <div>
-            <h1> Login Form</h1>
+            <h1>Article Form</h1>
             
         </div>
     )
 }
-export default Login
+export default Form
