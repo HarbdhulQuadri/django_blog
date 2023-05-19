@@ -1,10 +1,17 @@
-import React from 'react';
-function ArticleList(props){
-    return (
-        <div>
-            <h1> List of Articles </h1>
-            
-        </div>
-    )
-}
-export default ArticleList
+    import React from 'react';
+    
+    function ArticleList(props){
+        return (
+            <div>
+                {props.articles && props.articles.map(article=> {
+                    return (
+                        <div>
+                            <h1> {article.title} </h1>
+                            <p> {article.description} </p>
+                        </div>
+                )
+            })}
+            </div>
+        )
+    }
+    export default ArticleList
