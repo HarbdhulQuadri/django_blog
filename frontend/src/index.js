@@ -9,8 +9,8 @@ function Router(){
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element ={<Login/>} />
-        <Route exact path="/articles" element ={<App/>} />
+        <Route exact path="/login" element ={<Login/>} />
+        <Route exact path="/" element ={<App/>} />
       </Routes>
     </BrowserRouter>
   );
