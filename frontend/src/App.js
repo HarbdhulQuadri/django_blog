@@ -1,6 +1,10 @@
 import './App.css';
+import Footer from './component/Footer';
 import ArticleList from './component/ArticleList';
 import { useEffect,useState } from 'react';
+import Navbar from './component/NavBar';
+
+
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -19,7 +23,10 @@ function App() {
 
   return (
   <div>
+    <Navbar/>
     <ArticleList articles={articles}/>
+    <Footer/>
+
   </div>
   );
 }
