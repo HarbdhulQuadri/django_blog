@@ -3,6 +3,8 @@ import Footer from './component/Footer';
 import ArticleList from './component/ArticleList';
 import { useEffect,useState } from 'react';
 import Navbar from './component/NavBar';
+import Hero from './component/Hero';
+
 
 
 
@@ -24,6 +26,7 @@ function App() {
   return (
   <div>
     <Navbar/>
+    <Hero/>
     <ArticleList articles={articles}/>
     <Footer/>
 
