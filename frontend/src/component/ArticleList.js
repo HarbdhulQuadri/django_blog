@@ -14,8 +14,13 @@
                             <h1 className='font-bold text-2xl my-1'> {article.title} </h1>
                             <p className='text-gray-600 text-xl'> {article.description} </p>
                             <hr className='post-line'/>
-                            <div className='row'>
-                                <div>
+                            <div className='flex flex-auto'>
+                                <div className='col-md-1'>
+                                    <button className='rounded-none'>UPDATE </button>
+
+                                </div>
+                                <div className='col-md-1'>
+                                    <button className='rounded-none'> DELETE </button>
 
                                 </div>
 
