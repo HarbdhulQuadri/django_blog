@@ -20,7 +20,7 @@ Follow these steps to set up and run the blog application locally:
 
 - shell
 Copy code
-git clone https://github.com/your-username/blog-app.git
+git clone [https://github.com/HarbdhulQuadri/django_blog]
 Set up the frontend:
 
 - shell
