@@ -57,7 +57,7 @@ License
 The blog application is open-source and released under the MIT License. Feel free to modify and use it according to your needs.
 
 Contact
-If you have any questions or need further assistance, you can reach out to the project maintainer at your-automatequadri@gmail.com.
+If you have any questions or need further assistance, you can reach out to the project maintainer at automatequadri@gmail.com.
 
 
 
