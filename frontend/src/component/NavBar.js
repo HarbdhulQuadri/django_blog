@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import{menu, close, logo} from '../assets';
 
+
 const Navbar = () => {
     const [toggle,setToggle]=useState(false);
     const handleClick = ()=>setToggle(!toggle)
@@ -57,3 +58,48 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+// import React, { useState } from 'react';
+// import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Button } from 'flowbite';
+
+// const BlogNavbar = () => {
+//   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+//   const handleLogin = () => {
+//     // Perform login logic
+//     setIsLoggedIn(true);
+//   };
+
+//   const handleLogout = () => {
+//     // Perform logout logic
+//     setIsLoggedIn(false);
+//   };
+
+//   return (
+//     <Navbar expand="md" light>
+//       <NavbarBrand href="/">My Blog</NavbarBrand>
+//       <Nav className="ml-auto" navbar>
+//         <NavItem>
+//           <NavLink href="/">Home</NavLink>
+//         </NavItem>
+//         <NavItem>
+//           <NavLink href="/about">About</NavLink>
+//         </NavItem>
+//         <NavItem>
+//           <NavLink href="/contact">Contact</NavLink>
+//         </NavItem>
+//         {isLoggedIn ? (
+//           <NavItem>
+//             <Button onClick={handleLogout}>Logout</Button>
+//           </NavItem>
+//         ) : (
+//           <NavItem>
+//             <Button onClick={handleLogin}>Login</Button>
+//           </NavItem>
+//         )}
+//       </Nav>
+//     </Navbar>
+//   );
+// };
+
+// export default BlogNavbar;
