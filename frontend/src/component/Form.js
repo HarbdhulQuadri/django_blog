@@ -6,10 +6,19 @@ function Form(props) {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
 
-    const UpdateArticle = () => {
-        APIService.UpdateArticle(props.article.id, { title, description })
-            .then(resp => console.log(resp.json()))
-    }
+    const UpdateArticle = async () => {
+       APIService.UpdateArticle(props.article.id, { title, description })
+       .then(resp=> props.updatedInformation(resp ))
+       setTitle('')
+       setDescription('')
+      }
+      const InsertArticle = async () => {
+        APIService.InsertArticle(props.article.id, { title, description })
+        .then(resp=> props.insertedInformation(resp ))
+        setTitle('')
+        setDescription('')
+       }      
+      
 
     useEffect(() => {
         setTitle(props.article.title);
@@ -50,32 +59,42 @@ function Form(props) {
 
 
         //             {/* <Button type="submit">Post</Button> */}
-        //         </form>
+        //         </form> 
         //     </div>) : null}
 
         // </div>
         <div>
- 
-            <div className='col-md-6'>
-                <div className='forn-group'>
-                    <label htmlFor='title'> Title</label>
-                    <input type='text' class Name='form-control' placeholder='Enter your Post Title' />
+            <div> {props.article ? (
+            <div className='col-md-7'>
+                <div className='col-md-6'>
+                    <div className='form-group'>
+                        <label htmlFor='title'> Title</label>
+                        <input type='text' className='form-control' value={title} placeholder='Enter your Post Title' onChange={e=> setTitle(e.target.value)}/>
+
+                    </div>
+
 
                 </div>
+                <div className='col-md-6'>
+                    <div className='form-group'>
+                        <label htmlFor='description'> Description</label>
+                        <input type='text' cols="10" rows="5" value={description} className='form-control' placeholder='Enter your Post' onChange={e=> setDescription(e.target.value)} />
+
+                    </div>
+
+
+                </div>
+                <br />
+                {props.article.id ? 
+                 <button onClick={UpdateArticle} className='btn btn-success'> Update </button>
+                 :
+                 <button  onClick={InsertArticle}className='btn btn-primary'> Post </button>}
+               
+            </div>) : null}
 
 
             </div>
-            <div className='col-md-6'>
-                <div className='forn-group'>
-                    <label htmlFor='description'> Description</label>
-                    <input type='text' cols="30" rows="5" className='form-control' placeholder='Enter your Post' />
 
-                </div>
-
-
-            </div>
-            <br/>
-            <button className='btn btn-primary'> Submit </button>
         </div>
     );
 }
